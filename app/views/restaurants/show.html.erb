@@ -2,12 +2,11 @@
   <header>
   </header>
   <body>
-    <h2><%= @restaurant.name %></h2>
-    <p><%= @restaurant.address %></p>
-    <p><i><%= @restaurant.category %></i></p>
-    <ul>
+    <h2  class="text-center"><%= @restaurant.name %></h2>
+    <p class="text-center"><%= @restaurant.address %></p>
+    <p class="text-center"><i><%= @restaurant.category %></i></p>
       <% @restaurant.reviews.each do |review| %>
-        <li><%= review.content %>,  <b>rating:</b> <%= review.rating %></li>
+        <ul class="text-center list-unstyled"><%= review.content %><br><b>RATED:</b> <%= review.rating %></ul>
       <% end %>
     </ul>
   </body>

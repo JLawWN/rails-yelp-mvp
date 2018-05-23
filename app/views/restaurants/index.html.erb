@@ -2,10 +2,11 @@
   <header>
   </header>
   <body>
-    <div class="restaurants">
-      <ul>
+    <div class="text-center">
+      <ul class="list-unstyled">
         <% @restaurants.each do |restaurant| %>
-          <li><%= link_to "#{restaurant.name}", restaurant_path(restaurant)%> <i><%= restaurant.address %>               <%= link_to "Add review", new_restaurant_review_path(restaurant), class: "btn btn-success"%></i>,</li><br>
+          <li><%= link_to "#{restaurant.name}", restaurant_path(restaurant)%><%= link_to "Add review", new_restaurant_review_path(restaurant), class: "btn btn-link"%><br>
+            <%= restaurant.address %></li><br>
         <% end %>
       </ul>
     </div>
